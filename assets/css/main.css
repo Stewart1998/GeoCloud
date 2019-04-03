@@ -1,0 +1,495 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dfdfdf;
+    background-image: url("http://geocloud-cali-com.stackstaging.com/assets/img/50653244-seamless-clouds-floating-in-the-sky-illustration.jpg");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+body.nobg{
+    background-image: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    background-color: black;
+    height: 5em;
+    width: 100%;
+    z-index: 200;
+}
+
+header .header-title {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    left: 0.5em;
+    top: 0.7em;
+}
+header .header-title:hover{
+    cursor: pointer;
+}
+
+header .header-nav-btn {
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    right: 1em;
+    top: 0.8em;
+}
+
+header nav.top_right {
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 20%;
+    height: 4em;
+    border-bottom: 5px solid #99d9ea;
+    text-align: center;
+    background-color: transparent;
+}
+
+header nav.top_right ul {
+    margin: -0.3em auto;
+    width: auto;
+    display: none;
+}
+
+header nav.top_right ul li {
+    display: inline-block;
+    padding: 1em;
+}
+
+header nav.top_right ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: 'Passion One', cursive;
+    cursor: pointer;
+}
+
+nav.main-nav {
+    position: fixed;
+    top: 3em;
+    width: 100%;
+    height: 4em;
+    background-color: #2a2a2a;
+    border-bottom: 5px solid #99d9ea;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 200;
+    font-family: 'Passion One', cursive;
+    display: none;
+}
+
+nav.main-nav.scroll {
+    top: 0;
+}
+
+nav.main-nav ul {
+    margin: 0.2em auto;
+    width: auto;
+}
+
+.main-nav ul li {
+    display: inline-block;
+    padding: 1em;
+}
+
+nav.main-nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav.main-nav ul li ul {
+    position: absolute;
+    background-color: #2a2a2a;
+    width: 40%;
+    left: 30%;
+    top: 3.6em;
+    padding-left: 4em;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    text-align: left;
+    display: none;
+}
+
+nav.main-nav ul li ul li {
+    display: block;
+    border-bottom: 3px solid #fff;
+    width: 60%;
+}
+
+nav.main-nav ul li ul li:hover {
+    border-bottom-color: #99d9ea;
+    color: #99d9ea;
+    cursor: pointer;
+}
+
+nav.main-nav ul li ul li:hover>a {
+    color: #99d9ea;
+}
+
+nav.main-nav ul li ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+nav.main-nav ul li ul .ul_header {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+nav.main-nav ul li ul .ul_header {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.3em;
+    float: left;
+    width: auto;
+    padding: 0.5em;
+}
+
+nav.main-nav ul li ul .ul_body {
+    float: left;
+    margin-top: -0.3em;
+    width: 70%;
+    margin-left: 1em;
+}
+
+nav.mobile-nav {
+    position: fixed;
+    top: 5em;
+    background-color: black;
+    height: 0;
+    width: 100%;
+    transition: height 1.25s ease-in;
+    z-index: 200;
+}
+
+nav.mobile-nav.show {
+    height: 100vh;
+}
+
+nav.mobile-nav ul {
+    color: white;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+nav.mobile-nav ul.show {
+    overflow: auto;
+}
+
+nav.mobile-nav ul li {
+    color: white;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 35px;
+    padding: 0.5em;
+}
+
+nav.mobile-nav ul li ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    display: none;
+    transition: display 1.25s ease-in;
+}
+
+nav.mobile-nav ul li ul.show {
+    display: block;
+}
+
+.mobile-nav ul li ul li {
+    color: white;
+    list-style: none;
+}
+
+main {
+    margin-top: 5em;
+    width: 100%;
+    padding: 1em 0;
+    z-index: 10;
+    min-height: 100vh;
+}
+
+main .container.main {
+    padding: 0;
+    overflow: hidden;
+}
+
+main .container section {
+    padding: 0;
+    border-bottom: 7px solid #99d9ea;
+    transform: rotate(2deg);
+    margin-left: -5%;
+    margin-right: -5%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+main .container section::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    left: -5%;
+    bottom: -10px;
+    transform: rotate(2deg);
+    width: 110%;
+}
+
+main .container section .section_header {
+    font-size: 2em;
+    color: #000;
+    text-transform: uppercase;
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid #000;
+    transform: rotate(-2deg);
+    padding-top: 1em;
+    font-family: 'Bree Serif', serif;
+    text-align: center;
+}
+
+main .container section .section_body {
+    font-size: 1.5em;
+    color: black;
+    text-transform: none;
+    padding-top: 0.5em;
+    padding-left: 0;
+    padding-bottom: 1em;
+    text-align: center;
+    transform: rotate(-2deg);
+    font-family: 'Roboto', sans-serif;
+}
+
+main .container section .section_body .text {
+    display: block;
+    width: 95%;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
+main .container section .section_body img {
+    display: inline-block;
+    width: 5em;
+}
+
+main .container section:nth-child(even) {
+    background-color: rgb(0, 0, 0, 0.9);
+    text-align: right;
+}
+
+main .container section:nth-child(even)>.section_body {
+    padding-left: 0em;
+    padding-right: 1em;
+    color: #ffffff;
+}
+
+main .container section:nth-child(even)>.section_body .text {
+    margin-right: 5%;
+}
+
+main .container section:nth-child(even)>.section_header {
+    color: #fff;
+    border-bottom: 3px solid #fff;
+}
+
+@media only screen and (min-width: 450px) {
+    .container.main section .section_body{
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    header .header-nav-btn {
+        display: none;
+    }
+    header {
+        position: absolute;
+        top: 0;
+        height: 3em;
+    }
+    header .header-title {
+        font-size: 1.8em;
+        top: 0.3em;
+        left: 10%;
+    }
+    header nav.top_right {
+        top: 0;
+        right: 20%;
+        height: 4em;
+    }
+    header nav.top_right {
+        top: 0;
+        right: 5%;
+    }
+    header nav.top_right ul {
+        display: block;
+    }
+    header nav.top_right ul li {
+         font-size: 15px;
+    }
+    nav.main-nav {
+        display: block;
+    }
+    nav.main-nav  ul li {
+        padding-left: 0.5em;
+    }
+    nav.main-nav  ul li a {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 800px) {
+    header .header-title {
+        top: 0.3em;
+        left: 20%;
+    }
+    header nav.top_right {
+        width: auto;
+        top: 0;
+        right: 10%;
+    }
+    header nav.top_right ul {
+        display: block;
+    }
+    header nav.top_right ul li {
+         font-size: 15px;
+    }
+    nav.main-nav {
+        display: block;
+    }
+    nav.main-nav  ul li {
+        padding-left: 0.5em;
+    }
+    nav.main-nav  ul li a {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    main {
+        margin: 7em auto;
+        padding: 0;
+        background-color: transparent;
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+    }
+    main .container {
+        padding-top: 2em;
+        padding-left: 0%;
+        padding-right: 0%;
+        overflow: hidden;
+        height: auto;
+        min-height: 100vh;
+    }
+    main .container.main {
+        padding-top: 2em;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+    main .container section {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 7px solid #99d9ea;
+        transform: rotate(2deg);
+        margin-left: -5%;
+        margin-right: -5%;
+    }
+    main .container section::after {
+        position: absolute;
+        content: " ";
+        display: block;
+        left: -5%;
+        bottom: -10px;
+        transform: rotate(2deg);
+        width: 110%;
+    }
+    main .container section .section_header {
+        font-size: 2em;
+        color: #000;
+        text-transform: uppercase;
+        padding-bottom: 0.5em;
+        border-bottom: 3px solid #000;
+        transform: rotate(-2deg);
+        padding-top: 1em;
+        font-family: 'Bree Serif', serif;
+        text-align: left;
+    }
+    main .container section .section_body {
+        font-size: 1.5em;
+        color: black;
+        text-transform: none;
+        padding-top: 0.5em;
+        padding-left: 1em;
+        padding-bottom: 1em;
+        transform: rotate(-2deg);
+        font-family: 'Roboto', sans-serif;
+    }
+    main .container section .section_body .text {
+        display: inline-block;
+        width: 70%;
+        margin-left: 5%;
+    }
+    main .container section .section_body img {
+        display: inline-block;
+        width: 5em;
+    }
+    main .container section:nth-child(even) {
+        background-color: rgb(0, 0, 0, 0.9);
+        text-align: right;
+    }
+    main .container section:nth-child(even)>.section_header {
+        text-align: right;
+    }
+    main .container section:nth-child(even)>.section_body {
+        text-align: right;
+    }
+    main .container section:nth-child(even)>.section_body {
+        padding-left: 0em;
+        padding-right: 1em;
+        color: #ffffff;
+    }
+    main .container section:nth-child(even)>.section_body .text {
+        margin-right: 5%;
+    }
+    main .container section:nth-child(even)>.section_header {
+        color: #fff;
+        border-bottom: 3px solid #fff;
+    }
+
+    header .header-title {
+        top: 0.3em;
+        left: 30%;
+    }
+    header nav.top_right {
+        width: auto;
+        top: 0;
+        right: 20%;
+    }
+    nav.main-nav  ul li {
+        padding-left: 1em;
+    }
+    nav.main-nav  ul li a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    main .container section {
+        padding-left: 25%;
+        padding-right: 25%;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}

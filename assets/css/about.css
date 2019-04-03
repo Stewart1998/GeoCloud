@@ -1,0 +1,244 @@
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.3em;
+}
+
+.author-wrapper {
+    position: relative;
+    display: inline-grid;
+    margin: 0.5em auto;
+    width: 8em;
+    height: 10em;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.author-wrapper:hover {
+    cursor: pointer;
+}
+
+.grid .author-wrapper img.img-author {
+    display: block;
+    width: 100%;
+    height: 100%:
+}
+
+.author-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.author-footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0em;
+}
+
+.author-footer .author-name {
+    padding-top: 0.3em;
+    font-size: 1em;
+}
+
+.author-footer .author-info {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 0.8em;
+}
+
+.author-wrapper:hover .author-overlay {
+    opacity: 1
+}
+
+.body-overlay {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: none;
+    transition: .5s ease;
+}
+
+.body-overlay.show {
+    display: block;
+}
+
+.modal-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: -20em;
+    background-color: white;
+    width: 90%;
+    height: 15em;
+    transition: all 2s ease 0s;
+    text-align: left;
+}
+
+.modal-box.show {
+    top: 20em;
+}
+
+.modal-box .modal-header {
+    width: 100%;
+    height: 3em;
+    background-color: black;
+}
+
+.modal-box .modal-header .modal-author-name {
+    float: left;
+    color: #ffffff;
+    margin: 0.7em 0.5em;
+    font-size: 1.2em;
+}
+
+.modal-box .modal-header i {
+    float: right;
+    color: #ffffff;
+    margin: 0.7em 0.5em;
+    font-size: 1.2em;
+}
+
+.modal-box .modal-author-info {
+    padding-top: 1em;
+    margin: 0.5em;
+    width: 40%;
+    height: auto;
+    background-color: transparent;
+    float: left;
+}
+
+.modal-author-wrapper {
+    position: relative;
+    float: left;
+    margin: 1em 0;
+    left: 0;
+    margin-left: -8em;
+    width: 10em;
+    height: 10em;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.modal-author-wrapper img.img-author {
+    display: block;
+    width: 100%;
+    height: 100%:
+}
+
+.modal-author-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-author-footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    bottom: 0em;
+    color: #ffffff;
+}
+
+.modal-author-footer .modal-author-name {
+    padding-top: 0.3em;
+    font-size: 1em;
+}
+
+.modal-author-footer .modal-author-info {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 0.8em;
+}
+
+@media only screen and (min-width: 600px) {
+    .author-wrapper {
+        width: 12em;
+        height: 13em;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .author-wrapper {
+        width: 15em;
+        height: 15em;
+    }
+    .modal-box {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .modal-box {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .grid {
+        grid-template-columns: auto auto auto;
+    }
+    .author-wrapper {
+        width: 13em;
+        height: 13em;
+    }
+    .author-overlay {
+        opacity: 0;
+    }
+    .modal-box .modal-author-info {
+        font-size: 1.3em;
+    }
+    .modal-box .modal-author-info {
+        width: 60%;
+    }
+}

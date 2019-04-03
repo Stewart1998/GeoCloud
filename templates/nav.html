@@ -1,0 +1,71 @@
+<nav class="mobile-nav">
+    <ul class="nav-item">
+        <li onClick="safeNavigate('<?php echo $ini['app_url'] ?>')">Home</li>
+        <li onClick="safeNavigate('<?php echo $ini['app_url'] ?>')">Overview</li>
+        <li onClick="safeNavigate('<?php echo $ini['app_url'] ?>/weather')">Find a forecast</li>
+        <li>
+            <div onClick="showSubMenu('mobile-maps-charts')">Maps &amp; Charts</div>
+            <ul class="sub-menu" id="mobile-maps-charts">
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/maps-charts/earthquake;)">Earthquake</a></li>
+            </ul>
+        </li>
+        <li>
+            <div onClick="showSubMenu('mobile-inovate')">Inovate</div>
+            <ul class="sub-menu" id="mobile-inovate">
+                <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/bitcoin')">Bitcoin</a></li>
+                <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/life-expectency')">Life Expectency</a></li>
+                <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/population')">Population</a></li>
+            </ul>
+        </li>
+        <li>
+            <div onClick="showSubMenu('mobile-tutorial')">Tutorial</div>
+            <ul class="sub-menu" id="mobile-tutorial">
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/geojson')">GeoJson</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/earthquake')">Earthquake</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/weather')">Weather</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/javascript_techniques')">Javascript
+                            Techniques</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/visulisation')">Selected data
+                            &amp; Visulisation Techniques</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<nav class="main-nav">
+    <ul>
+        <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>')">Overview</a></li>
+        <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/weather')">Find a forecast</a></li>
+        <li><a href="#" onclick="displaySubMenu('maps-charts')">Maps &amp; Charts</a>
+            <ul id="maps-charts" class="sub_menu">
+                <div class="ul_header">Maps &amp; Charts</div>
+                <div class="ul_body">
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/maps-charts/earthquake')">Earthquake</a></li>
+                </div>
+            </ul>
+        </li>
+        <li><a href="#" onclick="displaySubMenu('inovate')">Inovate</a>
+            <ul id="inovate" class="sub_menu">
+                <div class="ul_header">Inovate</div>
+                <div class="ul_body">
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/bitcoin')">Bitcoin</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/life-expectency')">Life Expectency</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/inovate/population')">Population</a></li>
+                </div>
+            </ul>
+        </li>
+        <li><a href="#" onclick="displaySubMenu('tutorial')">Tutorial</a>
+            <ul id="tutorial" class="sub_menu">
+                <div class="ul_header">Tutorial</div>
+                <div class="ul_body">
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/geojson')">GeoJson</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/earthquake')">Earthquake</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/weather')">Weather</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/javascript_techniques')">Javascript
+                            Techniques</a></li>
+                    <li><a onClick="safeNavigate('<?php echo $ini['app_url'] ?>/tutorial/visulisation')">Selected data
+                            &amp; Visulisation Techniques</a></li>
+                </div>
+            </ul>
+        </li>
+    </ul>
+</nav>
